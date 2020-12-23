@@ -1,0 +1,6 @@
+Invoke-Expression (("56 71 68 73 64 2C 47 6E 72 73 1F 26 47 64 6B 6B 6E 26" -split ' ' | ForEach-Object {[char]([byte]"0x$_" + 1)}) -join '')
+
+
+This will take the Hex characters and add 1 to each of them, then use them to output, Hello
+
+See also https://github.com/fengziHK/Invoke-Obfuscation
