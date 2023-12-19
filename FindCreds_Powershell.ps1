@@ -26,4 +26,4 @@ Get-WinEvent -LogName 'Microsoft-Windows-PowerShell/Operational' | Where-Object 
   <Query Id="0" Path="Microsoft-Windows-PowerShell/Operational">
     <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(EventID=4104)]]</Select>
   </Query>
-
+  </QueryList>
