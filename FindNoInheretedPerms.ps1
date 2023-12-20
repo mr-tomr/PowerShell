@@ -4,6 +4,8 @@
 
 # These show where someone intentionally set the permissions and could present vulnerabilites.
 
+# Use with https://github.com/mr-tomr/PowerShell/blob/master/FindModifiableByUsers.ps1
+
 # Standard, display on screen
 Get-ChildItem -File -Recurse "C:\path\to\directory" | Where-Object { $_.GetAccessControl().Access | Where-Object { -not $_.IsInherited } } | ForEach-Object { Write-Host "File: $($_.FullName)"; icacls $_.FullName }
 
