@@ -8,3 +8,8 @@ Get-CimInstance -ClassName Win32_Service | Select Name, State, PathName | Where-
 # Unquoted Service Paths - Not in System Directory
 
 Get-CimInstance -ClassName Win32_Service | Select Name, State, PathName | Where-Object { $_.PathName -notlike "* *" -and $_.PathName -notlike "C:\Windows\system32\*" }
+
+# Find in CMD
+
+wmic service get name,pathname |  findstr /i /v "C:\Windows\\" | findstr /i /v """
+
