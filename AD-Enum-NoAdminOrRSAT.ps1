@@ -1,3 +1,5 @@
+
+
 The secret to being able to run AD enumeration commands from the AD Powershell module on a system without RSAT installed, 
 is the DLL located in C:\Windows\Microsoft.NET\assembly\GAC_64\Microsoft.ActiveDirectory.Management 
 on a system that has the RSAT installed:
@@ -6,6 +8,8 @@ Copy file to computer and import dll directly
 
 Located near
 C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.ActiveDirectory.Management\v4.0_10.0.0.0__31bf3856ad364e35\Microsoft.ActiveDirectory.Management.dll
+
+Or download from https://github.com/mr-tomr/PowerShell/blob/master/Microsoft.ActiveDirectory.Management.dll
 
 Import-Module .\Microsoft.ActiveDirectory.Management.dll
 
