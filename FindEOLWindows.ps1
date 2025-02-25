@@ -17,6 +17,10 @@
     Recommended Update Schedule:
     - Annually review and update this script to ensure accuracy.
     - Also update if Microsoft announces EOL changes or if new versions reach EOL.
+
+    Bash Script to Extract by OS Name:
+     OS_PATTERN="Windows Server 2012|Windows 7" && awk -F ',' -v os="$OS_PATTERN" 'NR>1 && tolower($2) ~ tolower(os) {gsub(/"/,"",$1); print $1}' EOL_Windows_OS.csv
+
 #>
 
 # Define EOL OS patterns
